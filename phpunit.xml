@@ -5,11 +5,8 @@
          colors="true"
 >
     <testsuites>
-        <testsuite name="Original">
-            <directory suffix="Test.php">./tests/Original</directory>
-        </testsuite>
-        <testsuite name="Refactored">
-            <directory suffix="Test.php">./tests/Refactored</directory>
+        <testsuite name="Unit">
+            <directory suffix="Test.php">./tests/Unit</directory>
         </testsuite>
     </testsuites>
     <coverage processUncoveredFiles="true">
