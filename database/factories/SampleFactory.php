@@ -11,7 +11,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
  */
 class SampleFactory extends Factory
 {
-    public function definition()
+    public function definition(): array
     {
         return [
             'device_id' => fake()->uuid(),

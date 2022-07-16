@@ -7,15 +7,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Sample extends Model
+class Device extends Model
 {
     use HasFactory;
 
-    public $timestamps = false;
-
     protected $fillable = [
-        'device_id',
-        'temp',
-        'created_at',
+        'hardware_id',
+        'location',
     ];
 }
