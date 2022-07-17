@@ -15,7 +15,7 @@ class DeviceFactory extends Factory
     {
         return [
             'hardware_id' => fake()->uuid(),
-            'location'    => fake()->words(2),
+            'location'    => fake()->city(),
         ];
     }
 }

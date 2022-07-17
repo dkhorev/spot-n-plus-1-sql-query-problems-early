@@ -41,7 +41,7 @@
   },
   "scripts": {
     "test": [
-      "vendor/bin/phpunit --testsuite Unit"
+      "vendor/bin/phpunit --testsuite Feature"
     ],
     "lint": [
       "vendor/bin/phpcs --parallel=8"

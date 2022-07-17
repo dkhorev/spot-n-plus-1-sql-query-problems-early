@@ -11,9 +11,14 @@ return new class extends Migration {
     {
         Schema::create('samples', static function (Blueprint $table) {
             $table->id();
-            $table->string('device_id');
+            $table->unsignedBigInteger('device_id');
             $table->float('temp');
             $table->timestamp('created_at')->useCurrent();
+
+            $table->foreign('device_id')
+                ->references('id')
+                ->on('devices')
+                ->cascadeOnDelete();
         });
     }
 

@@ -7,4 +7,12 @@ article ["...."](....)
 
 `composer i`
 
+`cp .env.example .env`
+
+Fill in DB credentials in `.env`
+
+Seed database: `php artisan migrate:fresh --seed`
+
+### Tests
+
 `composer test`
