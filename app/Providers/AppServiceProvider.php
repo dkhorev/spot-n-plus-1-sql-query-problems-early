@@ -15,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        // no op
+        // Model::preventLazyLoading(!app()->isProduction());
     }
 
     /**
