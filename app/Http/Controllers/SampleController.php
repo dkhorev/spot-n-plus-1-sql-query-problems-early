@@ -13,8 +13,8 @@ class SampleController extends Controller
     public function last100(): AnonymousResourceCollection
     {
         return SampleResource::collection(
-            Sample::latest()->limit(100)->get() // a broken query
-            // Sample::latest()->with(['device'])->limit(100)->get() // a fixed query
+        // Sample::latest()->limit(100)->get() // a broken query
+            Sample::latest()->with(['device'])->limit(100)->get() // a fixed query
         );
     }
 }
