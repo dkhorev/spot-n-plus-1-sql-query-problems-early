@@ -42,7 +42,7 @@ class SampleControllerTest extends TestCase
         $debugbar->boot();
 
         // act
-        $response = $this->getJson(route('api.last100'));
+        $this->getJson(route('api.last100'));
 
         // assert
         $queryCount = count($debugbar->collect()['queries']['statements']);
@@ -57,7 +57,7 @@ class SampleControllerTest extends TestCase
         $storage = resolve(EntriesRepository::class);
 
         // act
-        $response = $this->getJson(route('api.last100'));
+        $this->getJson(route('api.last100'));
 
         // assert
         $entries = $storage->get(
@@ -78,7 +78,7 @@ class SampleControllerTest extends TestCase
         $storage = resolve(EntriesRepository::class);
 
         // act
-        $response = $this->getJson(route('api.last100'));
+        $this->getJson(route('api.last100'));
 
         // assert
         $entries = $storage->get(
