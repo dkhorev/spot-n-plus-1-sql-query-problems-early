@@ -6,6 +6,7 @@ namespace Tests\Feature;
 
 use Barryvdh\Debugbar\LaravelDebugbar;
 use Database\Seeders\DatabaseSeeder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 use Laravel\Telescope\Contracts\EntriesRepository;
 use Laravel\Telescope\EntryType;
@@ -33,6 +34,20 @@ class SampleControllerTest extends TestCase
                 ],
             ],
         ]);
+    }
+
+    /** @test */
+    public function last100_lazy_load_disabled_when_correct_request_then_has_expected_query_count(): void
+    {
+        Model::preventLazyLoading();
+        $this->seed(DatabaseSeeder::class);
+
+        // act
+        $this->withoutExceptionHandling();
+        $response = $this->getJson(route('api.last100'));
+
+        // assert
+        $response->assertOk();
     }
 
     /** @test */
