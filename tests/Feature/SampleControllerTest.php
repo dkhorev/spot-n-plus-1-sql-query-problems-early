@@ -15,7 +15,7 @@ use Tests\TestCase;
 class SampleControllerTest extends TestCase
 {
     /** @test */
-    public function last100_debugbar_when_correct_requst_then_has_expected_resource_structure(): void
+    public function last100_debugbar_when_correct_request_then_has_expected_resource_structure(): void
     {
         $this->seed(DatabaseSeeder::class);
 
@@ -36,7 +36,7 @@ class SampleControllerTest extends TestCase
     }
 
     /** @test */
-    public function last100_debugbar_when_correct_requst_then_has_expected_query_count(): void
+    public function last100_debugbar_when_correct_request_then_has_expected_query_count(): void
     {
         $this->seed(DatabaseSeeder::class);
         $debugbar = new LaravelDebugbar();
@@ -51,7 +51,7 @@ class SampleControllerTest extends TestCase
     }
 
     /** @test */
-    public function last100_telescope_when_correct_requst_then_has_expected_query_count(): void
+    public function last100_telescope_when_correct_request_then_has_expected_query_count(): void
     {
         // phpunit.xml: change => <env name="TELESCOPE_ENABLED" value="true"/>
         $this->seed(DatabaseSeeder::class);
@@ -73,7 +73,7 @@ class SampleControllerTest extends TestCase
     }
 
     /** @test */
-    public function last100_dbquerylog_when_correct_requst_then_has_expected_query_count(): void
+    public function last100_dbquerylog_when_correct_request_then_has_expected_query_count(): void
     {
         $this->seed(DatabaseSeeder::class);
 
