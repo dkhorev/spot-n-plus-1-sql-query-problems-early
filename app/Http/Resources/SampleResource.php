@@ -17,8 +17,8 @@ class SampleResource extends JsonResource
     {
         return [
             'temp'        => $this->resource->temp,
-            'hardware_id' => $this->resource->device->hardware_id,
-            'location'    => $this->resource->device->location,
+            'hardware_id' => $this->resource->device?->hardware_id,
+            'location'    => $this->resource->device?->location,
             'datetime'    => $this->resource->created_at,
         ];
     }
